@@ -7,14 +7,14 @@ function Letter(charValue, position){
 		if(charValue == " "){
 			return " ";
 		}else if(this.guessValue){
-			return this.charValue;
+			return this.charValue.toUpperCase();
 		}else{
 			return "_";
 		}
 	}
 
 	this.guess = function(charValue){
-		if(charValue == this.charValue){
+		if(charValue.toUpperCase() == this.charValue.toUpperCase()){
 			this.guessValue = true;
 		}
 	}

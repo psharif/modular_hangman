@@ -18,7 +18,7 @@ function getUserGuess(){
 	}
 	]).then(function(response){
 		var userInput = response.letterGuess;
-		if(newGame.incorrectGuesses.includes(userInput) || newGame.correctGuesses.includes(userInput)){
+		if(newGame.incorrectGuesses.includes(userInput.toUpperCase()) || newGame.correctGuesses.includes(userInput.toUpperCase())){
 			console.log(chalk.blue("That Letter Has Been Guessed Already.\n"));
 			console.log(newGame.gameWord.wordToString());
 			console.log(chalk.blue("Wrong Guesses So Far:\n") + newGame.incorrectGuesses.join(" ") + "\n");
@@ -28,14 +28,14 @@ function getUserGuess(){
 
 		newGame.gameWord.checkGuess(userInput);
 
-		if(newGame.gameWord.wordToString().includes(userInput)){
+		if(newGame.gameWord.wordToString().includes(userInput.toUpperCase())){
 			console.log(chalk.green("Correct!\n"));
-			newGame.correctGuesses.push(userInput);
+			newGame.correctGuesses.push(userInput.toUpperCase());
 			console.log(newGame.gameWord.wordToString());
 			console.log(chalk.green("Wrong Guesses So Far:\n") + newGame.incorrectGuesses.join(" ") + "\n");
 		}else{
 			console.log(chalk.red("Incorrect!\n"));
-			newGame.incorrectGuesses.push(userInput);
+			newGame.incorrectGuesses.push(userInput.toUpperCase());
 			console.log(newGame.gameWord.wordToString());
 			console.log(chalk.red("Wrong Guesses So Far:\n") + newGame.incorrectGuesses.join(" ") + "\n");
 			console.log(chalk.red(drawings[newGame.guesses++]) + "\n");

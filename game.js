@@ -5,6 +5,7 @@ var drawings = require("./drawing.js");
 
 function Game(){ 
 	this.guesses = 0; 
+	this.correctGuesses = [];
 	this.incorrectGuesses = [];
 	this.gameWord = "";
 
