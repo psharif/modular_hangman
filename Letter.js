@@ -14,7 +14,7 @@ function Letter(charValue, position){
 	}
 
 	this.guess = function(charValue){
-		if(charValue.toLowerCase() == this.charValue.toLowerCase()){
+		if(charValue == this.charValue){
 			this.guessValue = true;
 		}
 	}
