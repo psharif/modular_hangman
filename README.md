@@ -10,3 +10,7 @@ Modularized Hangman in Node through command line using NPM Inquirer Package.
 * Type __node main.js__ To start the App. 
 
 ## Notes
+* User input is case sensitive __S__ is not the same as __s__
+* Some game words which are all movie titles include punctuation. The user will have to guess those. 
+* All spaces will be provided so space as user input is not necessary. 
+* Have gotten some bugs like .length is not defined on occassion but most times errors don't appear. 
