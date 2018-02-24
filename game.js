@@ -32,7 +32,7 @@ function Game(){
 }
 
 Game.prototype.getWord = function(){
-	var randomNum = Math.floor(Math.random() * 50); 
+	var randomNum = Math.floor(Math.random() * 49); 
 	return new Word(gameWords[randomNum]);
 }
 
